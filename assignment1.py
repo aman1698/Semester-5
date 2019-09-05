@@ -49,7 +49,6 @@ for t in t1:
         result.append(t)
 print(result) 
 
----------------------------------
 
 
 
