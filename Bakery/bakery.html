@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ST. Annes Bakery</title>
+</head>
+<body>
+	 <h1>Welcome Home</h1>
+
+	 <h3>Baker Menu</h3>
+<form>
+	 <table border="2">
+	   <thead> 	
+	 	<tr>
+	 		<th>item</th>
+	 		<th>price per quantity</th>
+	 		<th>quantity</th>
+	 	</tr>
+      </thead>
+      <tbody>
+      	<tr>
+      		<td>Chocolates</td>
+      		<td>$10 per unit</td>
+      		<td><input type="number" name="chocolate" width="10"> units</td>
+      	</tr>
+      	<tr>
+      		<td>Bread</td>
+      		<td>$5 per pound</td>
+      		<td><input type="number" name="bread"> pounds</td>
+      	</tr>
+      </tbody>
+	 </table>
+	 <button onclick="price();return false;">checkout</button>
+</form>
+<script type="text/javascript" src="bakery.js"></script>
+</body>
+</html>
