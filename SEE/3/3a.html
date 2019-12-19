@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		 author=[
+		{
+			"name":"Behrouz",
+			"country":"America",
+			"title":"Computer Networks",
+			"year":2015
+		},
+		{
+			"name":"Irodov",
+			"country":"Russia",
+			"title":"Physics",
+			"year":2016
+		},
+		{
+			"name":"O P TANDON",
+			"country":"United Kingdom",
+			"title":"Chemistry",
+			"year":2017
+		},
+		{
+			"name":"Mcgraw Hill",
+			"country":"America",
+			"title":"Mathematics",
+			"year":2019
+		}];
+	</script>
+	<table border="2">
+		<tr>
+			<th>Name</th>
+			<th>Country</th>
+			<th>Title</th>
+			<th>Year</th>
+		</tr>
+		<script>
+			for(i=0;i<2;i++)
+			{
+				document.write("<tr><td>"+author[i]["name"]+"</td><td>"+author[i]["country"]+"</td><td>"+author[i]["title"]+"</td><td>"+author[i]["year"]+"</td></tr>")
+			}
+		</script>
+	</table>
+	<script>
+		for(i=2;i<4;i++)
+		{
+			document.write("<p><strong>Name: "+author[i]["name"]+"<br>Country: "+author[i]["country"]+"<br>Title: "+author[i]["title"]+"<br>Year: "+author[i]["year"]+"</strong></p>")
+		}
+	</script>
+</body>
+</html>
+

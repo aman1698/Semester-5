@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	
+	<h2>Result : {{msg}}</h2>
+	<form action="{{url_for('index')}}" method='POST'>
+		 USN(1MS17IS015): <input type="text" name="usn" id="usn"/><br>
+		 DOB(16/02/1998):<input type="text" name="dob" id="dob"/><br>
+		Marks 1 <input type="number" name="m1" id="m1"/>
+		Marks 2 <input type="number" name="m2" id="m2"/>
+		Marks 3 <input type="number" name="m3" id="m3"/>
+		<input type=submit value="submit"  onclick="check()"/>
+	</form>
+	
+	<script>
+		function check(){
+			if(document.getElementById("usn").value==""||document.getElementById("dob").value==""||document.getElementById("m1").value==""||document.getElementById("m2").value==""||document.getElementById("m3").value=="")
+				alert("Empty field not allowed")
+		}
+	</script>
+</body>
+</html>
+
+	

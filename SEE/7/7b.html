@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table border="1">
+    <tr>
+      <th>LIST OF CARS</th>
+    </tr>
+    <tr>
+      <td onmouseover="f1()">FORD</td>
+      <td onmouseover="f2()">HONDA</td>
+      <td onmouseover="f3()">MARUTI</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <table id="tab" hidden border="2">
+    <tr>
+      <td>MODEL</td>
+      <td>NAME</td>
+      <td>PRICE</td>
+      <td>YEAR</td>
+    </tr>
+    <tr>
+      <td id="model"></td>
+      <td id="name"></td>
+      <td id="price"></td>
+      <td id="year"></td>
+    </tr>
+  </table>
+
+  <script>
+    var data = '{"car1":{"model":"ford","name":"FORD","price":"10L","year":2002},"car2":{"model":"honda","name":"HONDA","price":"20L","year":2003},"car3":{"model":"maruti","name":"MARUTI","price":"30L","year":2003}}'
+    function f1(){
+      var y = JSON.parse(data);
+      document.getElementById("tab").removeAttribute("hidden");
+      document.getElementById("model").innerHTML = '<img src="'+y.car1.model+'.jpeg">';
+      document.getElementById("name").innerHTML = y.car1.name;
+      document.getElementById("price").innerHTML = y.car1.price;
+      document.getElementById("year").innerHTML = y.car1.year;
+    }
+
+    function f2() {
+      var y = JSON.parse(data);
+      document.getElementById("tab").removeAttribute("hidden");
+      document.getElementById("model").innerHTML = '<img src="'+y.car2.model+'.jpeg">';
+      document.getElementById("name").innerHTML = y.car2.name;
+      document.getElementById("price").innerHTML = y.car2.price;
+      document.getElementById("year").innerHTML = y.car2.year;
+    }
+
+    function f3() {
+      var y = JSON.parse(data);
+      document.getElementById("tab").removeAttribute("hidden");
+      document.getElementById("model").innerHTML = '<img src="'+ y.car3.model+'.jpeg">';
+      document.getElementById("name").innerHTML = y.car3.name;
+      document.getElementById("price").innerHTML = y.car3.price;
+      document.getElementById("year").innerHTML = y.car3.year;
+    }
+  </script>
+</body>
+</html>

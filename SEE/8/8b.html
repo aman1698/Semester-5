@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var hospital=[
+		{
+			"name":"Ramaiah Hospital",
+			"location":"Bel circle"
+		},
+		{
+			"name":"Shirdi Sai",
+			"location":"Bel road"
+		},
+		{
+			"name":"The Family Doctor",
+			"location":"Sanjay Nagar"
+		}]
+	</script>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+		</tr>
+		<script>
+			for(i=0;i<hospital.length;i++)
+			{
+				document.write("<tr><td>"+hospital[i]["name"]+"</td><td>"+hospital[i]["location"]+"</td></tr>")
+			}
+		</script>
+	</table>
+	<br><br>
+	<span id="patient-details"><strong>Patients Details</span>
+	<script>
+		Patients = [
+                {
+                    'name':'Chester',
+                    'aadhar':123,
+                    'lab_tests':['Dengue','Cholera']
+                },
+                {
+                    'name' : 'Liam',
+                    'aadhar' : 234,
+                    'lab_tests' : ['Typhoid','Jaundice']
+                },
+                {
+                'name':'Michael',
+                'aadhar' : 345,
+                'lab_tests' : ['Drug Overdose','Pneumonia']
+                }
+            ];
+		elem=document.getElementById("patient-details")
+		p=document.createElement("p")
+		p.id="details"
+		
+		elem.onmouseover=function(){
+			elem.style="color:green"
+			for(i=0;i<Patients.length;i++)
+			{
+			  	p.innerHTML = p.innerHTML + "<i>Name : </i>"+Patients[i]['name']+"<br><i>Aadhar Number :</i>"+Patients[i]['aadhar']+"<br><i>Lab Tests:</i>"+Patients[i].lab_tests+"<br><br>"
+                }
+            }
+            p.style = "color:black"
+            elem.appendChild(p)
+            elem.onmouseout = function(){
+                elem.style = "color:black"
+                document.getElementById("details").innerHTML = ""
+            }
+        </script> 
+
+</body>
+</html>

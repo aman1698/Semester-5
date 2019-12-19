@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<h2>ATM</h2>
+	<h3>Your balance : {{balance}}</h3>
+	<h3>{{msg}}</h3>
+	
+	<form action="{{url_for('index')}}" method='POST' id="atm">
+	Amount : <input type="number" name="amount" required/>
+
+	<br>
+	<input type="submit" name="action" value="Withdraw" onclick="return validateForm(this)"/>
+	<input type="submit" name="action" value="Deposit" onclick="return validateForm(this)"/>
+	
+	</form>
+	
+	<script>
+		function validateForm(button)
+		{
+			var form=document.getElementById("atm")
+			if(form.amount.value=="")
+			{
+				alert("Enter amount")
+				return false;
+			}
+			if(parseInt(form.amount.value)<0)
+			{
+				alert("Negative amount not allowed")
+				return false;
+			}
+			if(button.value=="Withdraw" && (parseInt(form.amount.value)>5000))
+			{
+				alert("Amount > 5000")
+				return false;
+			}
+			if(button.value=="Deposit" && (parseInt(form.amount.value)>10000))
+			{
+				alert("Amount > 10000")
+				return false;
+			}
+			return true;
+		}
+	</script>
+</body>
+</html>
+

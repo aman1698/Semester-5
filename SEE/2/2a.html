@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+	<h2>Items in Store</h2>
+
+	<select>
+		<option>Eggs</option>
+		<option>Milk</option>
+		<option>Bread</option>
+	</select>
+	<br>
+	<br>
+	Enter the price of item : <input type="number" id="price"/><br><br>
+	Enter the quantity of item : <input type="number" id="quantity"/><br>
+
+	<button type="submit" value="submit" onclick="calculate()">Submit</button>
+	
+	<p>Total Amount = 
+		<i id="total" value="0"></i>
+	</p>
+	<br>
+	<button type="submit" id="paid" onclick="display()" disabled>Paid</button>
+
+	<script>
+		function calculate()
+		{
+			var a=document.getElementById("price").value
+			var b=document.getElementById("quantity").value
+			document.getElementById("total").innerHTML=a*b
+			document.getElementById("paid").disabled=false;
+		}
+		function display()
+		{
+			document.getElementById("total").innerHTML=0
+			document.getElementById("paid").disabled=true;
+			alert("Paid")		
+		}
+	</script>
+</body>
+</html>
+
