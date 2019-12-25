@@ -131,6 +131,44 @@ group by (deptno);
 |      4 |          1 |
 +--------+------------+
 
+delete from assigned_to where usn=1 and project_no=13;
+
+
+select *
+from assigned_to;
+
++-----+------------+
+| usn | project_no |
++-----+------------+
+|   1 |         10 |
+|   2 |         10 |
+|   2 |         11 |
+|   3 |         12 |
+|   4 |         12 |
+|   3 |         13 |
+|   4 |         13 |
++-----+------------+
+
+update assigned_to 
+set project_no = 12 
+where usn=1;
+
+select *
+from assigned_to;
+
++-----+------------+
+| usn | project_no |
++-----+------------+
+|   2 |         10 |
+|   2 |         11 |
+|   1 |         12 |
+|   3 |         12 |
+|   4 |         12 |
+|   3 |         13 |
+|   4 |         13 |
++-----+------------+
+
+
 
 
 
