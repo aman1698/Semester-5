@@ -130,6 +130,21 @@ where  sno =
 +-------+
 
 
+delete from part where colour='grey';
+
+select *
+from part;
+
++-----+-------+--------+
+| pno | pname | colour |
++-----+-------+--------+
+|   2 | screw | gold   |
+|   3 | pin   | silver |
++-----+-------+--------+
+
+
+
+
 
 
 
