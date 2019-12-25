@@ -9,7 +9,7 @@ create table supplier (
     sname varchar(10),
     address varchar(15));
 
-create table supply1 (
+create table supply (
     pno int,
     sno int,
     quantity int,
@@ -138,9 +138,11 @@ from part;
 +-----+-------+--------+
 | pno | pname | colour |
 +-----+-------+--------+
+|   1 | bolt  | silver |
 |   2 | screw | gold   |
-|   3 | pin   | silver |
 +-----+-------+--------+
+
+
 
 
 
