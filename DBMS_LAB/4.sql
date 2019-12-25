@@ -127,6 +127,21 @@ where wno in
 | ghi   |
 +-------+
 
+select pno 
+from shipment 
+group by pno 
+having count(wno)=
+  ( select count(*)
+    from warehouse);
+
++-----+
+| pno |
++-----+
+|   3 |
+|   4 |
++-----+
+
+
 select wno,count(pno)
 from shipment
 group by wno;
@@ -139,19 +154,6 @@ group by wno;
 |   3 |          2 |
 +-----+------------+
 
-select pno 
-from shipment1 
-group by pno 
-having count(wno)=
-  ( select count(*)
-    from warehouse);
-
-+-----+
-| pno |
-+-----+
-|   3 |
-|   4 |
-+-----+
 
 
 
